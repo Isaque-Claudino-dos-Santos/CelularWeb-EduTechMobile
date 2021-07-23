@@ -1,3 +1,39 @@
 .pgMusica main {
-    background-color: red;
+    background-color: black;
+}
+
+.pgMusica main .container {
+    height: 100%;
+}
+
+main .container .musica {
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
+
+main .container .musica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .musica .previerMusica {
+    width: 80%;
+    height: 50%;
+    background-color: aquamarine;
+    margin-bottom: 30px;
+}
+
+
+
+
+main .container .musica .btns-musica img {
+    width: 40px;
+    height: 40px;
+}
+
+.btns-musica img[alt="voltar"] {
+    transform: rotate(57deg);
 }

@@ -6,25 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- css global -->
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/celular.css">
-    <link rel="stylesheet" href="./css/paginas.css">
+    <link rel="stylesheet" href="./css/globalCss/reset.css">
+    <link rel="stylesheet" href="./css/globalCss/celular.css">
+    <link rel="stylesheet" href="./css/globalCss/footer.css">
+    <link rel="stylesheet" href="./css/globalCss/paginas.css">
 
     <!-- css pagina 1 -->
     <link rel="stylesheet" href="./css/pagina1/header.css">
     <link rel="stylesheet" href="./css/pagina1/main.css">
-    <link rel="stylesheet" href="./css/pagina1/footer.css">
 
     <!-- css pagina 2 -->
     <link rel="stylesheet" href="./css/pagina2/main.css">
-    <link rel="stylesheet" href="./css/pagina2/footer.css">
-    
+
     <!-- css pagina do app de musica -->
     <link rel="stylesheet" href="./css/paginaMusicapp/main.css">
+    <link rel="stylesheet" href="./css/paginaMusicapp/footer.css">
+    <link rel="stylesheet" href="./css/paginaMusicapp/header.css">
 
 
     <!-- css de troca de telas -->
-    <link rel="stylesheet" href="./css/camadas-pg/camadas_iniciais.css" id="estadosTela">
+    <link rel="stylesheet" href="./css/camadas-pg/pg-bloqueio.css" id="estadosTela">
 
     <title>Celular</title>
 </head>
@@ -118,7 +119,7 @@
                     <img src="./img/historico-btn-logo.svg" alt="Historico">
                 </div>
             </footer>
-        </div> 
+        </div>
 
         <!-- pg musicas app -->
 
@@ -139,7 +140,20 @@
 
             <main>
                 <div class="container">
-                    
+                    <div class="musica">
+                        
+                        <audio controls class="previerMusica">
+                            <source src="./audio/ms-1.mp3" type="audio/mpeg">
+                            <source src="./audio/Internet-Money.mp3" type="audio/mpeg">
+                            <source src="./audio/Roddy-Ricch.mp3" type="audio/mpeg">
+                        </audio>
+
+                        <div class="btns-musica">
+                            <img src="./img/voltar-logo.svg" alt="voltar">
+                            <img src="#" alt="pause/play">
+                            <img src="./img/voltar-logo.svg" alt="avançar">
+                        </div>
+                    </div>
                 </div>
             </main>
 

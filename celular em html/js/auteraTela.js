@@ -1,22 +1,16 @@
 let telaBloqueio = document.querySelector(".pg1");
 let telaInicio = document.querySelector(".pg2");
-let telaMusica = document.querySelector(".pgMusica");
-let appMusica = document.querySelector(".appmusica");
-
+let appMusica = document.querySelector("#appmusica");
+let cssDisplay = document.querySelector("#estadosTela");
 
 function inicio() {
-    telaInicio.style.visibility = "visible";
-    telaBloqueio.style.visibility = "hidden";
-    telaMusica.style.visibility = "hidden";
+    cssDisplay.href = "./css/camadas-pg/pg-inicio.css";
 }
 
 telaBloqueio.onclick = inicio;
 
 function musica() {
-    telaMusica.style.visibility = "visible";
-    telaBloqueio.style.visibility = "hidden";
-    telaInicio.style.visibility = "hidden";
+    cssDisplay.href = "./css/camadas-pg/pg-musica.css";
 }
 
-
-appMusica.mouseup = musica;
+appMusica.onclick = musica;
