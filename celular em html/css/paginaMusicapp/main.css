@@ -1,13 +1,9 @@
-.pgMusica main {
-    background-color: black;
-}
-
 .pgMusica main .container {
     height: 100%;
 }
 
 main .container .musica {
-    background-color: aqua;
+    background-color: rgb(173, 173, 173);
     width: 100%;
     height: 100%;
 }
@@ -19,21 +15,24 @@ main .container .musica {
     align-items: center;
 }
 
-main .container .musica .previerMusica {
+main .container .musica .playlist {
     width: 80%;
     height: 50%;
-    background-color: aquamarine;
+    background-color: rgb(233, 233, 233);
     margin-bottom: 30px;
 }
 
-
-
+main .container .musica .btns-musica {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
 
 main .container .musica .btns-musica img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .btns-musica img[alt="voltar"] {
-    transform: rotate(57deg);
+    transform: scaleX(-1);
 }

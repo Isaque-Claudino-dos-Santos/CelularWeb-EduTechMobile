@@ -142,16 +142,16 @@
                 <div class="container">
                     <div class="musica">
                         
-                        <audio controls class="previerMusica">
+                        <audio controls class="playlist" id="playlist">
                             <source src="./audio/ms-1.mp3" type="audio/mpeg">
                             <source src="./audio/Internet-Money.mp3" type="audio/mpeg">
                             <source src="./audio/Roddy-Ricch.mp3" type="audio/mpeg">
                         </audio>
 
                         <div class="btns-musica">
-                            <img src="./img/voltar-logo.svg" alt="voltar">
-                            <img src="#" alt="pause/play">
-                            <img src="./img/voltar-logo.svg" alt="avançar">
+                            <img src="./img/voltar-logo.svg" alt="voltar" onclick="back()">
+                            <img src="./img/play-logo.svg" alt="pause/play" id="pausePlay" onclick="playPause()">
+                            <img src="./img/voltar-logo.svg" alt="avançar" onclick="skip()">
                         </div>
                     </div>
                 </div>
@@ -168,6 +168,7 @@
     </div>
 
     <script src="js/auteraTela.js"></script>
+    <script src="js/musica.js"></script>
 </body>
 
 </html>
