@@ -20,17 +20,22 @@ main .container .musica .playlist {
     height: 50%;
     background-color: rgb(233, 233, 233);
     margin-bottom: 30px;
+    display: flex;
 }
 
 main .container .musica .btns-musica {
-    width: 90%;
     display: flex;
-    justify-content: space-between;
 }
 
 main .container .musica .btns-musica img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    margin: 6px;
+}
+
+main .container .musica .btns-musica input {
+    width: 100px;
+    transform: rotate(-90deg);
 }
 
 .btns-musica img[alt="voltar"] {

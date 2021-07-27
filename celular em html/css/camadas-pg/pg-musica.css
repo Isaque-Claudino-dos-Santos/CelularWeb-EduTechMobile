@@ -9,3 +9,6 @@
 .pgMusica {
     display: block;
 }
+.pgJogo {
+    display: none;
+}

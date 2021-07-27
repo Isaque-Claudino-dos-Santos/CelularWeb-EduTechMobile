@@ -16,4 +16,5 @@ footer .container {
 footer .container img {
     width: 30px;
     height: 30px;
+    transform: scaleX(-1);
 }

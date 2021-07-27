@@ -7,6 +7,13 @@ main .container .apps {
     height: 380px;
     margin: 10px 15px 5px 10px;
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .container .apps div {
+    margin: 0 5px;
+    text-align: center;
 }
 
 main .container .apps img {
