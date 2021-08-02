@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 154.42 166.95"
+   version="1.1"
+   id="svg57"
+   sodipodi:docname="pac-man-baixo.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview59"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.4884696"
+     inkscape:cx="4.3669014"
+     inkscape:cy="146.12324"
+     inkscape:window-width="1360"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg57" />
+  <defs
+     id="defs37">
+    <style
+       id="style35">.a{fill:#f2ec18;}.b{fill:#dd370b;}.c,.e{fill:#a52911;}.d{fill:#3d3b1e;}.e{opacity:0.37;}.f{fill:#ccc31f;}.g{fill:#f9f5c0;}</style>
+  </defs>
+  <title
+     id="title39">Element 13</title>
+  <polygon
+     class="a"
+     points="3.31,129.42 2.83,119.67 71.06,85.07 65.7,73.86 8.19,55.82 0.1,45.82 6.24,34.86 35.48,8.05 72.47,0 115.42,11.46 141.74,37.3 153.44,67.03 154.42,96.28 145.15,124.55 123.71,146.97 97.39,162.57 57.42,166.96 21.83,150.38 "
+     id="polygon41"
+     transform="matrix(-0.06137017,-0.94060334,-0.90207218,0.05529852,157.13486,148.04348)" />
+  <polygon
+     class="b"
+     points="97.99,81.68 71.87,77.49 39.6,90.6 9.35,107.74 2.51,117.23 2.96,125.09 7.83,125.89 27.5,123.37 52.71,112.78 97.99,84.56 "
+     id="polygon43"
+     transform="matrix(-0.06137017,-0.94060334,-0.90207218,0.05529852,157.13486,148.04348)" />
+  <polygon
+     class="c"
+     points="67.17,79.7 72.88,79.5 97.99,81.68 35.06,51.27 8.84,44.21 0.1,45.82 0,50.61 6.72,60.7 "
+     id="polygon45"
+     transform="matrix(-0.06137017,-0.94060334,-0.90207218,0.05529852,157.13486,148.04348)" />
+  <polygon
+     class="d"
+     points="76.77,46.53 82.28,43.15 89.59,24.14 87.84,20.24 83.44,20.41 75.1,39.86 75.1,43.19 "
+     id="polygon47"
+     transform="matrix(-0.06137017,-0.94060334,-0.90207218,0.05529852,157.13486,148.04348)" />
+  <polygon
+     class="e"
+     points="39.6,90.6 35.6,98.35 42.55,104.93 60.83,108.22 97.99,84.56 97.99,81.68 78.74,77.14 65.95,80.07 "
+     id="polygon49"
+     transform="matrix(-0.06137017,-0.94060334,-0.90207218,0.05529852,157.13486,148.04348)" />
+  <polygon
+     class="f"
+     points="123.71,146.97 145.15,124.55 154.42,97.62 153.44,67.03 140.89,101.64 115.67,119.19 59,129.79 2.7,130.52 21.83,150.38 57.42,166.96 97.39,162.57 "
+     id="polygon51"
+     transform="matrix(-0.06137017,-0.94060334,-0.90207218,0.05529852,157.13486,148.04348)" />
+  <path
+     class="g"
+     d="m 141.90125,61.840728 c 0.26626,-1.055131 -7.23669,-19.576935 -7.23669,-19.576935 l -22.61389,-21.779004 -25.530893,-5.687635 -13.082552,2.567947 33.675085,8.63531 24.42987,19.212343 z"
+     id="path53"
+     style="stroke-width:0.922981" />
+  <polygon
+     class="g"
+     points="78.89,29.34 84.74,28.53 80.84,24.14 "
+     id="polygon55"
+     transform="matrix(-0.06137017,-0.94060334,-0.90207218,0.05529852,157.13486,148.04348)" />
+  <metadata
+     id="metadata410">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Element 13</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

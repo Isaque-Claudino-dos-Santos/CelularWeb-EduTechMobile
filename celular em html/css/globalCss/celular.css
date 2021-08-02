@@ -10,4 +10,5 @@
     background-image: url(../../img/bg-celular.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    /* overflow: hidden; */
 }

@@ -3,87 +3,152 @@ let pincel = tela.getContext("2d");
 
 function game() {
     let ponto = 0;
+
     
-    let fruta_x = fruta_y = Math.floor(Math.random() * tela.width);
-    let sapo_x = sapo_y = Math.floor(Math.random() * tela.width);
-    let vel = 1;
+    let fruta_img = new Image()
+    fruta_img.src = "../img/sprits-game/fruta-game.svg";
+
+
+    let fruta_x = Math.floor(Math.random() * tela.width);
+    let fruta_y = Math.floor(Math.random() * tela.height);
+    let fruta_tw = fruta_th = 50;
+
+    
+    let sapo_img = new Image()
+    sapo_img.src = "../img/sprits-game/pac-man-direita.svg";
+
+    let sapo_x = sapo_y = 0;
+    let sapo_tw = sapo_th = 50;
+    let vel = 8;
+
 
     let LEFT = 65, TOP = 87, RIGHT = 68, DOWN = 83;
+    let mvr = mvt = mvl = mvd = false;
 
-    addEventListener("keydown", mover);
+    addEventListener("keydown", moveOn);
+    addEventListener("keyup", moveOff);
 
-    function mover(ev) {
-        let key = ev.keyCode;
+    function moverse() {
+        if (mvr) {
+            sapo_x += vel;
+            sapo_img.src = "../img/sprits-game/pac-man-direita.svg";
+        } else if (mvt) {
+            sapo_y -= vel;
+            sapo_img.src = "../img/sprits-game/pac-man-cima.svg";
+        } else if (mvl) {
+            sapo_x -= vel;
+            sapo_img.src = "../img/sprits-game/pac-man-esqueda.svg";
+        } else if (mvd) {
+            sapo_y += vel;
+            sapo_img.src = "../img/sprits-game/pac-man-baixo.svg";
+        };
+    }
 
-        if (sapo_x + 2 > tela.width || sapo_x - 1 < 0 || sapo_y + 2 > tela.height || sapo_y - 1 < 0) {
-            ponto = 0;
-        }
-
+    function moveOn(ev) {
+        const key = ev.keyCode;
 
         switch (key) {
             case LEFT:
-
-                sapo_x -= vel;
+                mvl = true;
                 break;
             case TOP:
-
-                sapo_y -= vel;
+                mvt = true;
                 break;
             case RIGHT:
-                sapo_x += vel;
+                mvr = true;
                 break;
             case DOWN:
-
-                sapo_y += vel;
+                mvd = true;
                 break;
         }
-
-        console.log(`C: x${sapo_x}`)
-        console.log(`C: y${sapo_y}`)
-        console.log(`F: x${fruta_x}`)
-        console.log(`F: y${fruta_y}`)
     }
 
-    // desenha fruta
+    function moveOff(ev) {
+        const key = ev.keyCode;
 
-
-    function colocaFruta() {
-        let coloca_x = Math.floor(Math.random() * tela.width);
-        let coloca_y = Math.floor(Math.random() * tela.height);
-
-        fruta_x = coloca_x;
-        fruta_y = coloca_y;
+        switch (key) {
+            case LEFT:
+                mvl = false;
+                break;
+            case TOP:
+                mvt = false;
+                break;
+            case RIGHT:
+                mvr = false;
+                break;
+            case DOWN:
+                mvd = false;
+                break;
+        }
     }
 
-    // REGRAS
+    // colisão com borda da tela
 
-    function regras() {
-        if (sapo_x === fruta_x && sapo_y === fruta_y) {
-            colocaFruta();
+    function colisaoBorda() {
+        if (sapo_x + sapo_tw > tela.width) { // to left
+            sapo_x -= vel;
+        } else if (sapo_x < 0) { // to right
+            sapo_x += vel;
+        } else if (sapo_y < 0) { // to top
+            sapo_y += vel;
+        } else if (sapo_y + sapo_th > tela.height) {// to dowm
+            sapo_y -= vel;
+        }
+    }
+
+
+    function coletarFruta() {
+        if (fruta_x + fruta_tw > tela.width) { // to left
+            fruta_x = Math.floor(Math.random() * tela.width);
+            fruta_y = Math.floor(Math.random() * tela.height);
+        } else if (fruta_x < 0) { // to right
+            fruta_x = Math.floor(Math.random() * tela.width);
+            fruta_y = Math.floor(Math.random() * tela.height);
+        } else if (sapo_y < 0) { // to top
+            fruta_x = Math.floor(Math.random() * tela.width);
+            fruta_y = Math.floor(Math.random() * tela.height);
+        } else if (fruta_y + fruta_th > tela.height) {
+            fruta_x = Math.floor(Math.random() * tela.width);
+            fruta_y = Math.floor(Math.random() * tela.height);
+        }
+        if (sapo_x + sapo_tw > fruta_x &&
+            sapo_x < fruta_x + fruta_tw &&
+            sapo_y + sapo_th > fruta_y &&
+            sapo_y < fruta_y + fruta_th) {
+            fruta_y = Math.floor(Math.random() * tela.height);
             ponto += 1;
         }
     }
 
 
+
+
+
     // sprits
 
-    function desenhaRect(x,y,c) {
-        pincel.fillStyle = c;
-        pincel.fillRect(x,y,1,1);
-        pincel.fill();
+
+
+    function imgDesenho(src, x, y, w, h) {
+        pincel.drawImage(src, x, y, w, h)
     }
 
-    function atualizacao() {
+    function update() {
+        moverse();
+        colisaoBorda();
+        coletarFruta();
+    }
+
+    function items() {
         pincel.clearRect(0, 0, tela.width, tela.height);
-        desenhaRect(fruta_x, fruta_y,"purple");
-        desenhaRect(sapo_x, sapo_y,"green");
+        imgDesenho(fruta_img, fruta_x, fruta_y, fruta_tw, fruta_th);
+        imgDesenho(sapo_img, sapo_x, sapo_y, sapo_tw, sapo_th);
         document.querySelector(".score").innerHTML = `Pontos: ${ponto}`;
-        regras();
     }
 
     function loop() {
         requestAnimationFrame(loop, tela);
-        atualizacao();
+        items();
+        update();
     }
 
     loop();
