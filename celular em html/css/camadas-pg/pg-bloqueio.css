@@ -3,7 +3,8 @@
 }
 
 .pg2 { /* tela inicial */
-    display: none;
+    display: none;]
+    background: linear-gradient(40deg ,blue,red);
 }
 
 .pgMusica {

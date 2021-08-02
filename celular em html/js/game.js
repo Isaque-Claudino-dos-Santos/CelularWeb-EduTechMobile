@@ -4,18 +4,19 @@ let pincel = tela.getContext("2d");
 function game() {
     let ponto = 0;
 
-    
+
     let fruta_img = new Image()
-    fruta_img.src = "../img/sprits-game/fruta-game.svg";
+    fruta_img.src = document.getElementById("fruit").src;
+
 
 
     let fruta_x = Math.floor(Math.random() * tela.width);
     let fruta_y = Math.floor(Math.random() * tela.height);
     let fruta_tw = fruta_th = 50;
 
-    
+
     let sapo_img = new Image()
-    sapo_img.src = "../img/sprits-game/pac-man-direita.svg";
+    sapo_img.src = document.getElementById("pec-direita").src;
 
     let sapo_x = sapo_y = 0;
     let sapo_tw = sapo_th = 50;
@@ -31,16 +32,16 @@ function game() {
     function moverse() {
         if (mvr) {
             sapo_x += vel;
-            sapo_img.src = "../img/sprits-game/pac-man-direita.svg";
+            sapo_img.src = document.getElementById("pec-direita").src;
         } else if (mvt) {
             sapo_y -= vel;
-            sapo_img.src = "../img/sprits-game/pac-man-cima.svg";
+            sapo_img.src = document.getElementById("pec-cima").src;
         } else if (mvl) {
             sapo_x -= vel;
-            sapo_img.src = "../img/sprits-game/pac-man-esqueda.svg";
+            sapo_img.src = document.getElementById("pec-esqueda").src;
         } else if (mvd) {
             sapo_y += vel;
-            sapo_img.src = "../img/sprits-game/pac-man-baixo.svg";
+            sapo_img.src = document.getElementById("pec-baixo").src;
         };
     }
 
@@ -120,16 +121,10 @@ function game() {
         }
     }
 
-
-
-
-
     // sprits
 
-
-
     function imgDesenho(src, x, y, w, h) {
-        pincel.drawImage(src, x, y, w, h)
+        pincel.drawImage(src, x, y, w, h);
     }
 
     function update() {
