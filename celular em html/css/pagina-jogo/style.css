@@ -1,0 +1,8 @@
+.pgJogo main .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pgJogo main .container canvas {
+    border: 3px solid springgreen ;
+}

@@ -78,12 +78,29 @@ function vol(v) {
 }
 
 //currentTime
+let playList = document.querySelector("#playlist");
+let tpm = document.getElementById("tempM");
 
-function tempMusic(t) {
-    let playList = document.querySelector("#playlist");
-    t.max = playList.duration
-    playList.currentTime = t.value;
-    
+function tempMusic() {
+    playList = document.querySelector("#playlist");
+    tpm = document.getElementById("tempM");
+    vt = document.getElementById("vierT").innerHTML =  tpm.value;
+    tpm.max = playList.duration;
+    tpm.value = playList.currentTime;
+    playList.currentTime = tpm.value;
 
-    console.log(`Tempo-Musica:${t.value}`);
+    console.log(`Tempo-Musica:${tpm.value}`);
 }
+
+function reatT() {
+    playList.currentTime = tpm.value;
+}
+
+tpm.onclick = reatT;
+
+setInterval(tempMusic, 1000);
+
+
+
+
+

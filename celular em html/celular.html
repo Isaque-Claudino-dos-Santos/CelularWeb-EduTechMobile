@@ -6,31 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- css global -->
-    <link rel="stylesheet" href="./css/globalCss/reset.css">
-    <link rel="stylesheet" href="./css/globalCss/celular.css">
-    <link rel="stylesheet" href="./css/globalCss/footer.css">
-    <link rel="stylesheet" href="./css/globalCss/paginas.css">
+    <link rel="stylesheet" href="./css/global/style.css">
 
     <!-- css pagina 1 -->
-    <link rel="stylesheet" href="./css/pagina1/header.css">
-    <link rel="stylesheet" href="./css/pagina1/main.css">
-
+    <link rel="stylesheet" href="./css/pagina1.css/style.css">
     <!-- css pagina 2 -->
-    <link rel="stylesheet" href="./css/pagina2/main.css">
-
-    <!-- css pagina do app de musica -->
-    <link rel="stylesheet" href="./css/paginaMusicapp/main.css">
-    <link rel="stylesheet" href="./css/paginaMusicapp/footer.css">
-    <link rel="stylesheet" href="./css/paginaMusicapp/header.css">
-    
-    <!-- css pagina do app do jogo -->
-    <link rel="stylesheet" href="./css/paginaJogo/main.css">
-    <link rel="stylesheet" href="./css/paginaJogo/footer.css">
-
-
-
+    <link rel="stylesheet" href="./css/pagina2.css/style.css">
+    <!-- css pagina de musicas -->
+    <link rel="stylesheet" href="./css/paginaMusica/style.css">
+    <link rel="stylesheet" href="./css/paginaMusica/range.css">
+    <!-- css pagina do jogo -->
+    <link rel="stylesheet" href="./css/pagina-jogo/style.css">
     <!-- css de troca de telas -->
-    <link rel="stylesheet" href="./css/camadas-pg/pg-bloqueio.css" id="estadosTela">
+    <link rel="stylesheet" href="./css/trocaCSS/padrao.css" id="linkCSS">
+
 
     <title>Celular</title>
 </head>
@@ -53,7 +42,7 @@
             </header>
 
             <main>
-                <div class="container">
+                <div class="container" id="telaBloqueio">
                     <div class="data">
                         <p class="hora">14:44</p>
                         <p class="data-mes">TERÇA-FEIRA, 20 DE JULHO</p>
@@ -106,20 +95,13 @@
 
             <main>
                 <div class="container">
-                    <div class="apps">
-                        <div id="appmusica">
-                            <img src="./img/appMusica-logo134021.svg" alt="app-musica">
-                            <p>MUSICA</p>
-                        </div>
-                        <div id="appGame">
-                            <img src="./img/controle-icone.svg" alt="app-game">
-                            <p>JOGO</p>
-                        </div>
+                    <div id="appmusica">
+                        <img src="./img/appMusica-logo134021.svg" alt="app-musica">
+                        <p>MUSICA</p>
                     </div>
-                    <div class="menu">
-                        <div class="btn-menu">
-                            <img src="./img/icone-menu.svg" alt="menu">
-                        </div>
+                    <div id="appGame">
+                        <img src="./img/controle-icone.svg" alt="app-game">
+                        <p>JOGO</p>
                     </div>
                 </div>
             </main>
@@ -127,14 +109,13 @@
             <footer>
                 <div class="container">
                     <img src="./img/voltar-logo.svg" alt="voltar">
-                    <img src="./img/ciculo-logo.svg" alt="Sair" id="sair1">
+                    <img src="./img/ciculo-logo.svg" alt="Sair" onclick="clickSair()">
                     <img src="./img/historico-btn-logo.svg" alt="Historico">
                 </div>
             </footer>
         </div>
 
         <!-- pg musicas app -->
-
 
         <div class="pgMusica">
             <header>
@@ -153,8 +134,6 @@
             <main>
                 <div class="container">
                     <div class="musica">
-
-
                         <audio controls class="playlist" id="playlist">
                             <source src="./audio/ms-1.mp3" type="audio/mpeg">
                             <source src="./audio/Internet-Money.mp3" type="audio/mpeg">
@@ -163,29 +142,36 @@
                         </audio>
 
 
-                        <div class="btns-musica">
-                            <input type="range" onmouseup="tempMusic(this)">
-                            <img src="./img/voltar-logo.svg" alt="voltar" onclick="back()">
-                            <img src="./img/play-logo.svg" alt="pause/play" id="pausePlay" onclick="playPause()">
-                            <img src="./img/voltar-logo.svg" alt="avançar" onclick="skip()">
-                            <input type="range" min="0" max="100" onmouseup="vol(this)">
+                        <div class="confg-musica">
+                            <div class="vierMusica">
+                                <p class="Nome-Musica">lorem ipus loapre ldna This Music</p>
+                                <p id="vierT"></p>
+                                <input type="range" id="tempM">
+                            </div>
+                            <div class="btns">
+                                <img src="./img/voltar-logo.svg" alt="voltar" onclick="back()">
+                                <img src="./img/play-logo.svg" alt="pause/play" id="pausePlay" onclick="playPause()">
+                                <img src="./img/voltar-logo.svg" alt="avançar" onclick="skip()">
+                                <input type="range" min="0" max="100" onmouseup="vol(this)" class="volume-musica">
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </main>
 
             <footer>
                 <div class="container">
                     <img src="./img/voltar-logo.svg" alt="voltar">
-                    <img src="./img/ciculo-logo.svg" alt="Sair" id="sair2">
+                    <img src="./img/ciculo-logo.svg" alt="Sair" onclick="clickSair()">
                     <img src="./img/historico-btn-logo.svg" alt="Historico">
                 </div>
             </footer>
         </div>
 
-         <!-- pg do jogo -->
+        <!-- pg do jogo -->
 
-         <div class="pgJogo">
+        <div class="pgJogo">
             <header>
                 <div class="container">
                     <div class="operadora">CLARO BR</div>
@@ -201,18 +187,18 @@
 
             <main>
                 <div class="container">
-                    <div class="game">
-                        <div class="score"></div>
-                        <div class="telaGameOver">GAME OVER</div>
-                        <canvas width="400" height="400"></canvas>
-                        <div id="sprite" style="display: none;">
-                            <img src="./img/sprits-game/fruta-game.svg" id="fruit">
-                            <img src="./img/sprits-game/pac-man-direita.svg" id="pec-direita">
-                            <img src="./img/sprits-game/pac-man-cima.svg" id="pec-cima">
-                            <img src="./img/sprits-game/pac-man-esqueda.svg" id="pec-esqueda">
-                            <img src="./img/sprits-game/pac-man-baixo.svg" id="pec-baixo">
-                        </div>
-                        <p>para jogar use (a,w,d,s) !!coleta a fruta!!</p>
+                    <div class="score"></div>
+                    <canvas width="400" height="400"></canvas>
+                    <div class="dica">
+                        <p>Use W,A,S,D</p>
+                    </div>
+
+                    <div id="sprite" style="display: none">
+                        <img src="./img/sprits-game/fruta-game.svg" id="fruit">
+                        <img src="./img/sprits-game/pac-man-direita.svg" id="pec-direita">
+                        <img src="./img/sprits-game/pac-man-cima.svg" id="pec-cima">
+                        <img src="./img/sprits-game/pac-man-esqueda.svg" id="pec-esqueda">
+                        <img src="./img/sprits-game/pac-man-baixo.svg" id="pec-baixo">
                     </div>
                 </div>
             </main>
@@ -220,12 +206,11 @@
             <footer>
                 <div class="container">
                     <img src="./img/voltar-logo.svg" alt="voltar">
-                    <img src="./img/ciculo-logo.svg" alt="Sair" id="sair3">
+                    <img src="./img/ciculo-logo.svg" alt="Sair" onclick="clickSair()">
                     <img src="./img/historico-btn-logo.svg" alt="Historico">
                 </div>
             </footer>
         </div>
-
     </div>
 
     <script src="./js/auteraTela.js"></script>

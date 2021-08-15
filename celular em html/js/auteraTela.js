@@ -1,38 +1,25 @@
-let telaBloqueio = document.querySelector(".pg1");
-let telaInicio = document.querySelector(".pg2");
-let appJogo = document.querySelector("#appGame");
-let appMusica = document.querySelector("#appmusica");
-let btnVoltarInicio1 = document.querySelector("#sair1");
-let btnVoltarInicio2 = document.querySelector("#sair2");
-let btnVoltarInicio3 = document.querySelector("#sair3");
-let cssDisplay = document.querySelector("#estadosTela");
+let cssHref = document.getElementById("linkCSS");
+let dir = "./css/trocaCSS/";
 
-function inicio() {
-    cssDisplay.href = "./"
-    cssDisplay.href = "./css/camadas-pg/pg-inicio.css";
+let tela_bloqueio = document.getElementById("telaBloqueio");
+let appmusica= document.getElementById("appmusica");
+let appGame = document.getElementById("appGame");
+
+function clickPg1() {
+   cssHref.href = dir+"ir_pg2.css";
 }
+tela_bloqueio.onclick = clickPg1;
 
-telaBloqueio.onclick = inicio;
-
-function musica() {
-    cssDisplay.href = "./"
-    cssDisplay.href = "./css/camadas-pg/pg-musica.css";
+function clickAppMusica() {
+   cssHref.href = dir+"ir_AppMusica.css";
 }
+appmusica.onclick = clickAppMusica;
 
-appMusica.onclick = musica;
-
-function jogo() {
-    cssDisplay.href = "./"
-    cssDisplay.href = "./css/camadas-pg/pg-jogo.css";
+function clickAppJogo() {
+   cssHref.href = dir+"ir_AppJogo.css";
 }
+appGame.onclick = clickAppJogo;
 
-appJogo.onclick = jogo;
-
-function voltarInicio() {
-    cssDisplay.href = "./"
-    cssDisplay.href = "./css/camadas-pg/pg-inicio.css";
+function clickSair() {
+   cssHref.href = dir+"ir_pg2.css";
 }
-
-btnVoltarInicio1.onclick = voltarInicio;
-btnVoltarInicio2.onclick = voltarInicio;
-btnVoltarInicio3.onclick = voltarInicio;

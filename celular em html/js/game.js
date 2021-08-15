@@ -12,7 +12,7 @@ function game() {
 
     let fruta_x = Math.floor(Math.random() * tela.width);
     let fruta_y = Math.floor(Math.random() * tela.height);
-    let fruta_tw = fruta_th = 50;
+    let fruta_tw = fruta_th = 40;
 
 
     let sapo_img = new Image()
@@ -20,7 +20,7 @@ function game() {
 
     let sapo_x = sapo_y = 0;
     let sapo_tw = sapo_th = 50;
-    let vel = 8;
+    let vel = 5;
 
 
     let LEFT = 65, TOP = 87, RIGHT = 68, DOWN = 83;

@@ -1,0 +1,49 @@
+.playlist {
+    display: none;
+}
+
+.pgMusica main .container {
+    width: 100%;
+    height: 100%;
+}
+
+img[alt="voltar"] {
+    transform: rotate(180deg);
+}
+
+.pgMusica main .container img {
+    width: 40px;
+    height: 40px;
+}
+
+.pgMusica main .container .confg-musica {
+    display: flex;
+    flex-direction: column;
+}
+
+.pgMusica main .container .confg-musica div {
+    margin-top: 40px;
+}
+
+.pgMusica main .container .confg-musica {
+    display: flex;
+    align-items: center;
+}
+
+.pgMusica main .container .confg-musica .btns {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pgMusica main .container .confg-musica .vierMusica {
+    width: 90%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
