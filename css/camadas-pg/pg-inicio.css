@@ -1,0 +1,17 @@
+.pg1 {
+    /* tela bloqueio */
+    display: none;
+}
+
+.pg2 {
+    /* tela inicial */
+    display: block;
+}
+
+.pgMusica {
+    display: none;
+}
+
+.pgJogo {
+    display: none;
+}

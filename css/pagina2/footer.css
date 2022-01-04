@@ -1,0 +1,11 @@
+
+.pg2 footer {
+    position: absolute;
+    bottom: -60px;
+}
+
+.pg2 footer .container img {
+    width: 30px;
+    height: 30px;
+    margin-left: 48px;
+}

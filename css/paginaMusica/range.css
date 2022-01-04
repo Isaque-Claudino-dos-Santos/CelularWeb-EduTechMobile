@@ -1,0 +1,37 @@
+#tempM {
+    appearance: none;
+    width: 90%;
+    height: 10px;
+    background-color: grey;
+    border-radius: 10px;
+    overflow: visible;
+    margin: 5px;
+}
+
+#tempM::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#tempM::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.volume-musica {
+    appearance: none;
+    background-color: grey;
+    position: absolute;
+    margin-top: 20px;
+    right: -40px;
+    transform: rotate(-90deg);
+}
+
+.volume-musica::-webkit-slider-thumb {
+ appearance: none;
+ width: 10px;
+ height: 10px;
+ background-color: black;
+}
